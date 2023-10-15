@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    --main-color :#333 ;
+}
+
+/* ------------ header start ----------------*/
+
+
+header {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+}
+
+header > a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--main-color);;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.desktop-class{
+    color: #fff;
+    display:flex;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.mobile-class {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    row-gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    color: #333;;
+    background-color: #c7c4c4;
+    top: 60px;
+    width: 50%;
+    font-size: 18px;
+    justify-content: space-evenly;
+    border: 1px solid #c7c4c4;
+    height: 30%;
+    align-items: center;
+    right: 30px;
+}
+
+header ul li {
+    margin-right: 4vw;
+    cursor: pointer;
+}
+
+header ul li:active {
+    color: #919191;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header #btns {
+    display: flex;
+    gap: 3px;
+}
+#btns button {
+    padding: 8px;
+}
+
+#show-navbar , #hide-navbar, #signin-btn {
+    padding: 8px;
+    font-size: 14px;
+}
+
+#hide-navbar {
+    display: none;
+}
+
+#show-navbar {
+    display: none;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+/* ------------ header end  ------------------*/
+
+
+
+/* ------------ main start  ----------------*/
+
+#search-input {
+    width: 350px;
+    height: 45px;
+    border: 1px solid var(--main-color);;
+    border-radius: 5px;
+    margin: 20px 0px 10px 0px;
+    padding: 0 7px;
+    font-size: 24px;
+}
+
+#search-button {
+    width: 100px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0px;
+    background-color: var(--main-color);;
+    color: white;
+}
+
+.sorting-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#sort-by-date, #sort-by-rating {
+    width: 225px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+#all-tab, #favorits-tab {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: var(--main-color);;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#prev-button, #current-button, #next-button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+/* ------------ Card CSS  ----------------*/
+
+.card {
+    width: 200px;
+    
+    border: 1px solid var(--main-color);;
+    margin: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.poster {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vote-fav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.fav-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    margin-top: 20px;
+}
+
+.movies-list-pagination {
+    margin: 25px 40px;
+}
+
+#movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+}
+
+
+#loader {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#favourite-page {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* ------------ main end  ----------------*/
+
+
+
+/* ------------modal start -------------- */
+
+.modal-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-card{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.img-section {
+    width: 50%;
+    height: 100%;
+    
+}
+
+.img-section img{
+    width: 100%;
+}
+
+.description-section{
+    display: flex;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.movie-name {
+    font-size: 2.6vmax;
+}
+
+.overview {
+    height: 15vw;
+    overflow:auto;
+    font-size: 1.2vw;
+}
+
+.movie-rating {
+    font-size: 1.3vw;
+}
+.description-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 100%;
+    font-size: 1.4vmax;
+}
+
+.book-tickets-btn{
+    width: 50%;
+    padding: 8px;
+    border: 2px solid black;
+    cursor: pointer;
+    align-self: center;
+}
+
+.modal-close-btn{
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ------------ media queries  ----------------*/
+
+@media screen and (max-width: 780px){
+    .modal-card {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header ul li {
+        margin-right: 4vw;
+        cursor: pointer;
+        border-bottom: 1px solid #252525;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    header>a {
+        font-size: 10px;
+    }
+
+    #sort-by-date, #sort-by-rating {
+        width: 220px;
+        display: block;
+        height: 35px;
+        border: 1px solid #c7c4c4;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .sorting-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    #search-input {
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+        margin: 10px 0px;
+    }
+
+    #search-button {
+        height: 35px;
+        margin: 10px 0px;
+    }
+
+    .card {
+        width: 260px;
+        margin: 15px 0px;
+    }
+
+    #favourite-page h1{
+        font-size: 20px;
+    }
+
+    .overview {
+        display: none;
+    }
+
+    .book-tickets-btn{
+        width: 100%;
+        font-size: 1.3vh;
+    }
+
+    .movie-rating {
+        font-size: 1.5vh;
+    }
+    .description-card {
+        font-size: 1.2vh;
+    }
+
+    .movie-name {
+        font-size: 2vh;
+    }
+    
+    .img-section img {
+        height: 20vh;
+        width: 25vw;
+    }
+}
+
+

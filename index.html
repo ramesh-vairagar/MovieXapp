@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviex App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./assets/images/favicon2.png" type="image/png">
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <h1>Moviex</h1>
+      </a>
+
+      <nav>
+        <ul class="header-ul desktop-class">
+            <li>Action</li>
+            <li>Comedy</li>
+            <li>Adventure</li>
+            <li>Thriller</li>
+            <li>Romance</li>
+        </ul>
+        
+        <div id="btns">
+          <button id="signin-btn"><a style="text-decoration: none; color: black;" href="signup.html" target="_blank">Sign-In</a></button>
+          <button id="show-navbar"><i class="fa-solid fa-bars"></i></button>
+          <button id="hide-navbar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="search-bar">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search by name..."
+        autocomplete="off"
+      />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div class="sorting-options">
+      <button id="sort-by-date">Sort by date (oldest to latest)</button>
+      <button id="sort-by-rating">Sort by rating (least to most)</button>
+    </div>
+
+    <div class="tabs">
+      <button id="all-tab" class="active-tab">All</button>
+      <button id="favorits-tab">Favorites</button>
+    </div>
+
+
+    <!---------------- loader HTML ------------------>
+
+    <div id="loader">
+    <img src="./assets/images/143.png" alt="">
+    </div>
+
+    <div id="favourite-page">
+      <h1>There is Nothing here Yet</h1>
+      <h3>click on <i class="fa-regular fa-heart fa-2xl fav-icon rs && "fa-solid" ></i>&nbsp; &nbsp; &nbsp; to add Item</h3>
+    </div>
+
+
+    <div class="modal-container hidden">
+      
+    </div>
+
+
+      <!------------- Pagination and footer ------------>
+
+      
+    <div class="movies-list-pagination">
+      <ul id="movies-list">
+
+      </ul>
+    </div>
+    <div class="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="current-button"
+          ><span id="currPage">1</span> of <span id="totalPage">1</span></span
+        >
+        <button id="next-button">Next</button>
+    </div>
+    <footer>
+      <p>&copy; 2023 All rights Reserved -AB</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/68129f478c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
